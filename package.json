@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:alkymi-io/functions.git"
+    "url": "git@github.com:urban-box-skill.git"
   },
   "husky": {
     "hooks": {
