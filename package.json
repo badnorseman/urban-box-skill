@@ -1,0 +1,34 @@
+{
+  "name": "urban-box-skill",
+  "version": "1.0.0",
+  "description": "Urban Box skill",
+  "author": "Dan Jensen",
+  "license": "MIT",
+  "main": "handler.js",
+  "scripts": {
+    "build": "npm install; npm link ../skills-kit-lib;",
+    "deploy": "npm run build; ./node_modules/.bin/serverless deploy",
+    "test": "NODE_ENV=dev ./node_modules/.bin/jest --coverage",
+    "undeploy": "NODE_ENV=dev ./node_modules/.bin/serverless remove -v"
+  },
+  "dependencies": {
+    "serverless": "1.35.0"
+  },
+  "devDependencies": {
+    "babel-core": "6.26.3",
+    "husky": "1.2.1",
+    "jest": "23.6.0",
+    "prettier": "1.15.3",
+    "pretty-quick": "1.8.0",
+    "serverless-offline": "3.31.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:alkymi-io/functions.git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
